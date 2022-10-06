@@ -37,14 +37,14 @@ namespace ConsolePrj
 
         private static void Test_PersonnesToPersonnesDTO_via_Select()
         {
-            Console.WriteLine("\n\n\n\n--------- Test_PersonnesToPersonnesDTO_via_Select (très rapide) ---------\n");
+            Console.WriteLine("\n\n\n\n--------- Test_PersonnesToPersonnesDTO_via_Select (projection personne.Coupons à la mano.)    (très rapide) ---------\n");
 
             ICollection<Personne> personnes = Personnes.Get();
 
             chrono.Start();
             Debug.ShowData(
                 personnes.Select(personne => new PersonneDTO()
-                    { //Conversion A LA MANO., chaque Personne en PersonneDTO.
+                    { //Conversion A LA MANO., de chaque Personne en PersonneDTO.
                         Id = personne.Id,
                         NomComplet = $"{personne.Nom} - {personne.Prenom}",
                         Coupons = personne.Coupons.Select(coupon => new CouponDTO()
@@ -69,7 +69,7 @@ namespace ConsolePrj
 
             chrono.Start();
             Debug.ShowData(
-                personnes.Select(personne => mapper.Map<PersonneDTO>(personne)) //Conversion chaque Personne en PersonneDTO suivant PersonneProfile.
+                personnes.Select(personne => mapper.Map<PersonneDTO>(personne)) //Conversion chaque Personne en PersonneDTO suivant PersonneProfile et CouponProfile.
             );
             chrono.StopAndShowDuration();
 
