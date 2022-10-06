@@ -37,7 +37,7 @@ namespace ConsolePrj
 
         private static void Test_PersonnesToPersonnesDTO_via_Select()
         {
-            Console.WriteLine("\n\n\n--------- Test_PersonnesToPersonnesDTO_via_Select (très rapide) ---------\n");
+            Console.WriteLine("\n\n\n\n--------- Test_PersonnesToPersonnesDTO_via_Select (très rapide) ---------\n");
 
             ICollection<Personne> personnes = Personnes.Get();
 
@@ -60,9 +60,10 @@ namespace ConsolePrj
             Console.ReadKey();
         }
 
+
         private static void Test_PersonnesToPersonnesDTO_via_Select_et_AutoMapper_Map()
         {
-            Console.WriteLine("\n\n\n--------- Test_PersonnesToPersonnesDTO_via_Select_et_Map (assez rapide) ---------\n");
+            Console.WriteLine("\n\n\n\n--------- Test_PersonnesToPersonnesDTO_via_Select_et_Map (assez rapide) ---------\n");
 
             ICollection<Personne> personnes = Personnes.Get();
 
@@ -75,9 +76,10 @@ namespace ConsolePrj
             Console.ReadKey();
         }
 
+
         private static void Test_PersonnesToPersonnesDTO_via_AutoMapper_ProjectTo()
         {
-            Console.WriteLine("\n\n\n--------- Test_PersonnesToPersonnesDTO_via_ProjectTo (Le moins rapide !) ---------\n");
+            Console.WriteLine("\n\n\n\n--------- Test_PersonnesToPersonnesDTO_via_ProjectTo (Le moins rapide !) ---------\n");
 
             ICollection<Personne> personnes = Personnes.Get();
 
