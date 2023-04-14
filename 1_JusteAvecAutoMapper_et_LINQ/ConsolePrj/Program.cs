@@ -44,16 +44,16 @@ namespace ConsolePrj
             chrono.Start();
             Debug.ShowData(
                 personnes.Select(personne => new PersonneDTO()
-                    { //Conversion A LA MANO., de chaque Personne en PersonneDTO.
-                        Id = personne.Id,
-                        NomComplet = $"{personne.Nom} - {personne.Prenom}",
-                        Coupons = personne.Coupons.Select(coupon => new CouponDTO()
-                        {
-                            ID = coupon.Id,
-                            CODE = coupon.Code
-                        }).ToList()
-                    }
-               ) 
+                { //Conversion A LA MANO., de chaque Personne en PersonneDTO.
+                    Id = personne.Id,
+                    NomComplet = $"{personne.Nom} - {personne.Prenom}",
+                    Coupons = personne.Coupons.Select(coupon => new CouponDTO()
+                    {
+                        ID = coupon.Id,
+                        CODE = coupon.Code
+                    }).ToList()
+                }
+               )
             );
             chrono.StopAndShowDuration();
 
